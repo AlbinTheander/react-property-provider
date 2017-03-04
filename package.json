@@ -5,6 +5,7 @@
   "main": "dist/property-provider.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --progress --colors",
+    "prepublish": "npm build",
     "test": "jest",
     "test-watch": "jest --watch",
     "lint": "eslint --ext .js,.jsx src/** test/**"
