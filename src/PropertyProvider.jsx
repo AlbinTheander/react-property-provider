@@ -4,11 +4,11 @@ import PropertyHolder from './PropertyHolder';
 
 
 export default class PropertyProvider extends Component {
-  constructor(props) {
+  constructor(props, context) {
     super(props);
     const pureProps = { ...props };
     delete pureProps.children;
-    this.holder = new PropertyHolder(props);
+    this.holder = new PropertyHolder(pureProps, context.propertyHolder);
   }
 
   getChildContext() {
@@ -26,5 +26,9 @@ export default class PropertyProvider extends Component {
 }
 
 PropertyProvider.childContextTypes = {
+  propertyHolder: PropTypes.object,
+};
+
+PropertyProvider.contextTypes = {
   propertyHolder: PropTypes.object,
 };
