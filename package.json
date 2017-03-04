@@ -1,6 +1,6 @@
 {
-  "name": "property-provider",
-  "version": "0.1.0",
+  "name": "react-property-provider",
+  "version": "1.0.0",
   "description": "A generic implementation of the provider pattern for React",
   "main": "dist/property-provider.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlbinTheander/property-provider.git"
+    "url": "git+https://github.com/AlbinTheander/react-property-provider.git"
   },
   "keywords": [
     "React",
@@ -22,9 +22,9 @@
   "author": "Albin.Theander@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlbinTheander/property-provider/issues"
+    "url": "https://github.com/AlbinTheander/react-property-provider/issues"
   },
-  "homepage": "https://github.com/AlbinTheander/property-provider#readme",
+  "homepage": "https://github.com/AlbinTheander/react-property-provider#readme",
   "jest": {
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   },
