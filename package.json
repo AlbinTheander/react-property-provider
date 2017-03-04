@@ -1,7 +1,7 @@
 {
   "name": "property-provider",
   "version": "0.1.0",
-  "description": "A generic implementation of the provide pattern for React",
+  "description": "A generic implementation of the provider pattern for React",
   "main": "dist/property-provider.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --progress --colors",
@@ -37,7 +37,6 @@
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
     "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-disable": "^0.3.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
@@ -49,6 +48,6 @@
     "webpack": "^2.2.1"
   },
   "peerDependencies": {
-    "react": ">=15 <16"
+    "react": "^15.0.0"
   }
 }
