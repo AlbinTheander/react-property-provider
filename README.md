@@ -1,4 +1,7 @@
 # React Property Provider
+
+[![Build Status](https://travis-ci.org/AlbinTheander/react-property-provider.svg?branch=master)](https://travis-ci.org/AlbinTheander/react-property-provider)
+
 React Property Provider aims att making it easier to use the React context to
 pass information to down a subtree of components without having to use properties.
 
