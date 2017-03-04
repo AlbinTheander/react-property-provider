@@ -1,7 +1,3 @@
-import React, { Component } from 'react';
+export { default } from './PropertyProvider';
 
-export class Dummy extends Component {
-    render() {
-        return <div>Hello</div>;
-    }
-}
+export { default as withProperties } from './with-properties';
