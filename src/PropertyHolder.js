@@ -8,13 +8,9 @@ export default class PropertyHolder {
   }
 
   set(prop, value) {
-    if (prop in this.props) {
-      if (this.props[prop] !== value) {
-        this.props[prop].value = value;
-        this.props[prop].subscribers.forEach(f => f());
-      }
-    } else if (this.parent) {
-      this.parent.set(prop, value);
+    if (prop in this.props && this.props[prop].value !== value) {
+      this.props[prop].value = value;
+      this.props[prop].subscribers.forEach(f => f());
     }
   }
 
