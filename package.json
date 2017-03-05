@@ -7,6 +7,7 @@
     "build": "webpack --config webpack.config.js --progress --colors",
     "prepublish": "npm build",
     "test": "jest",
+    "travis": "jest --coverage && cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js",
     "test-watch": "jest --watch",
     "lint": "eslint --ext .js,.jsx src/** test/**"
   },
@@ -26,7 +27,11 @@
   },
   "homepage": "https://github.com/AlbinTheander/react-property-provider#readme",
   "jest": {
-    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -35,6 +40,7 @@
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
+    "coveralls": "^2.12.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
     "eslint-config-airbnb": "^14.1.0",
