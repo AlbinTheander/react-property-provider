@@ -68,4 +68,16 @@ describe('withProperty', () => {
     wrapper.setProps({ status: 'awesome' });
     expect(wrapper).toHaveText('awesome');
   });
+
+  test('will unsubscribe to prop changes when unmounting', () => {
+    const wrapper = mount(
+      <PropertyProvider status="cool">
+        <Status />
+      </PropertyProvider>);
+
+    const holder = wrapper.find('PropertyProvider').node.holder;
+    expect(holder.props.status.subscribers.length).toBe(1);
+    wrapper.unmount();
+    expect(holder.props.status.subscribers.length).toBe(0);
+  });
 });
