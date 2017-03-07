@@ -80,4 +80,14 @@ describe('withProperty', () => {
     wrapper.unmount();
     expect(holder.props.status.subscribers.length).toBe(0);
   });
+
+  test('will not inject properties if not wrapped in a PropertyProvider', () => {
+    const wrapper = mount(<Status />);
+    expect(wrapper).toHaveText('');
+  });
+
+  test('will not crash when unmounting when not wrapped in a PropertyProvider', () => {
+    const wrapper = mount(<Status />);
+    wrapper.unmount();
+  });
 });
