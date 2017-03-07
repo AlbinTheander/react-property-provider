@@ -1,5 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 
+function getDisplayName(comp) {
+  return comp.displayName || comp.name || 'Component';
+}
+
 export default function withProperties(WrappedComponent, ...propNames) {
   class WithProps extends Component {
     constructor(props, context) {
@@ -33,6 +37,7 @@ export default function withProperties(WrappedComponent, ...propNames) {
   }
 
   WithProps.contextTypes = { propertyHolder: PropTypes.object };
+  WithProps.displayName = `withProperties(${getDisplayName(WrappedComponent)})`;
 
   return WithProps;
 }

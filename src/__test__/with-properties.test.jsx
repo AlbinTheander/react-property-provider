@@ -90,4 +90,15 @@ describe('withProperty', () => {
     const wrapper = mount(<Status />);
     wrapper.unmount();
   });
+
+  test('displayName is withProperties(<ComponentName>)', () => {
+    // eslint-disable-next-line prefer-arrow-callback
+    const TestComp = withProperties(function Test() { return <div />; });
+    expect(TestComp.displayName).toBe('withProperties(Test)');
+  });
+
+  test('displayName shows withProperties(Component) for anonymous components', () => {
+    const TestComp = withProperties(() => <div />);
+    expect(TestComp.displayName).toBe('withProperties(Component)');
+  });
 });
