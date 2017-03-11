@@ -1,6 +1,6 @@
 {
   "name": "react-property-provider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A generic implementation of the provider pattern for React",
   "main": "dist/property-provider.js",
   "scripts": {
