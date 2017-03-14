@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.org/AlbinTheander/react-property-provider.svg?branch=master)](https://travis-ci.org/AlbinTheander/react-property-provider) [![npm version](https://img.shields.io/npm/v/react-property-provider.svg)](https://www.npmjs.com/package/react-property-provider) [![Coverage Status](https://coveralls.io/repos/github/AlbinTheander/react-property-provider/badge.svg?branch=master)](https://coveralls.io/github/AlbinTheander/react-property-provider?branch=master)
 
-React Property Provider aims att making it easier to use the React context to
-pass information to down a subtree of components without having to use properties.
+React Property Provider aims at making it easier to use the React context to
+pass information down to a subtree of components without having to use properties.
 
 ## Installation
 React Property Provider requires React v15 or later.
@@ -35,7 +35,7 @@ function App(props) {
             </PropertyProvider>
             <PropertyProvider themeColor="red" greeting="Yo!">
                 <Pane position="Right"/>
-            </PropertyProvider
+            </PropertyProvider>
         </App>
     );
 }
