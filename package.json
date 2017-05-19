@@ -1,6 +1,6 @@
 {
   "name": "react-property-provider",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A generic implementation of the provider pattern for React",
   "main": "dist/property-provider.js",
   "scripts": {
@@ -22,7 +22,10 @@
   ],
   "author": "Albin.Theander@gmail.com",
   "contributors": [
-    { "name": "Marcus Lindfeldt", "url": "https://github.com/marcuslindfeldt"}
+    {
+      "name": "Marcus Lindfeldt",
+      "url": "https://github.com/marcuslindfeldt"
+    }
   ],
   "license": "MIT",
   "bugs": {
