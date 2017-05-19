@@ -21,6 +21,9 @@
     "property"
   ],
   "author": "Albin.Theander@gmail.com",
+  "contributors": [
+    { "name": "Marcus Lindfeldt", "url": "https://github.com/marcuslindfeldt"}
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlbinTheander/react-property-provider/issues"
