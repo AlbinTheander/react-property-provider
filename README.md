@@ -6,7 +6,7 @@ React Property Provider aims at making it easier to use the React context to
 pass information down to a subtree of components without having to use properties.
 
 ## Installation
-React Property Provider requires React v15 or later.
+React Property Provider requires React v15.5 or later.
 ```
 npm install --save react-property-provider
 ```
