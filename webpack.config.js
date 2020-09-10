@@ -1,23 +1,26 @@
-module.exports = {
-  context: __dirname + '/src',
+const path = require('path');
 
-  entry: './index',
+module.exports = {
+  mode: 'production',
+
+  context: path.resolve(__dirname, 'src'),
+  entry: './index.js',
 
   output: {
     library: 'PropertyProvider',
     libraryTarget: 'commonjs2',
     filename: 'property-provider.js',
-    path: __dirname + '/dist'
+    path: path.resolve(__dirname, 'dist'),
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      }
-    ]
+      },
+    ],
   },
 
   resolve: {
@@ -29,7 +32,7 @@ module.exports = {
       root: 'React',
       commonjs: 'react',
       commonjs2: 'react',
-      amd: 'react'
-    }
-  }
+      amd: 'react',
+    },
+  },
 };
